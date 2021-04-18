@@ -16,7 +16,6 @@ export const getMode = (list) => {
     .map((v) => v.main.temp)
     .reduce((p, n) => (p[n] ? p[n]++ : (p[n] = 1)) && p, {});
   const repeatedValues = [...new Set(Object.values(result))];
-  console.log(repeatedValues, result);
   if (repeatedValues.length == 1) {
     return null;
   }
